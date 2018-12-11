@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - node
+branches:
+  only:
+    - master
+before_install:
+  - git config --global user.name "Travis CI"
+  - git config --global user.email "deploy@travis-ci.org"
+install:
+  - yarn install
+script:
+  - yarn test
+  - yarn build
+after_success:
+  - cd demo/public
+  - git init
+  - git checkout --orphan gh-pages
+  - git add -A
+  - git commit -m "travis auto build"
+  - git push --force https://$REPO_TOKEN@github.com/rikakomoe/copywriting-correct.git gh-pages:gh-pages
