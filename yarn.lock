@@ -176,6 +176,11 @@
     pretty-ms "^0.2.1"
     text-table "^0.2.0"
 
+"@types/pangu@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/@types/pangu/-/pangu-3.3.0.tgz#dceeaabd0ba64e1721b3ccd6b950ef6b7ecff3ef"
+  integrity sha512-uD56QlIuQJvfO9sMJKTkJleWyMhZ//TPO0/WmVIwCTomCHZzllm/KZOaN4Og6R7EJXU5sIMunexTqyxy9bCT/g==
+
 "@types/prop-types@*":
   version "15.5.7"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.5.7.tgz#c6f1e0d0109ff358b132d98b7b4025c7a7b707c5"
@@ -5058,6 +5063,11 @@ pako@~1.0.5:
   version "1.0.7"
   resolved "https://registry.npmjs.org/pako/-/pako-1.0.7.tgz#2473439021b57f1516c82f58be7275ad8ef1bb27"
   integrity sha512-3HNK5tW4x8o5mO8RuHZp3Ydw9icZXx0RANAOMzlMzx7LVXhMJ4mo3MOBpzyd7r/+RUu8BmndP47LXT+vzjtWcQ==
+
+pangu@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/pangu/-/pangu-3.3.0.tgz#e8ca9711b6ae49b609441528406030dae2e32e68"
+  integrity sha1-6MqXEbauSbYJRBUoQGAw2uLjLmg=
 
 parallel-transform@^1.1.0:
   version "1.1.0"

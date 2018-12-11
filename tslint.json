@@ -52,15 +52,7 @@
       "LF"
     ],
     "comment-format": [
-      true,
-      "check-lowercase",
-      {
-        "ignore-words": [
-          "TODO",
-          "HACK",
-          "BUG"
-        ]
-      }
+      true
     ],
     "no-require-imports": true,
     "prefer-const": true,
