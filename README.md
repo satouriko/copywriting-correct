@@ -27,19 +27,23 @@ GitHub 是一个通过 Git 进行版本控制的软件源代码托管服务，�
 很明显，第二种排版中英文有空格，标点符号也使用正确，专有名词使用正确，会让人看起来更舒服，也更专业。
 本系统正是基于 [中文文案排版指北（简体中文版）](https://github.com/mzlogin/chinese-copywriting-guidelines) 进行纠正，帮助解决中英文混排的排版问题，提高文案可阅读性。
 
-## CDN
+## 浏览器
 
 ```html
-<script src="https://unpkg.com/copywriting-correct"></script>
+<script src="https://unpkg.com/copywriting-correct/dist/copywriting-correct.min.js"></script>
 ```
 
-## 安装
+```javascript
+const service = new window.CopyWritingCorrectService();
 
+const text = service.correct('在LeanCloud上，数据存储是围绕AVObject进行的。');
 ```
+
+## Node.js 或 Webpack
+
+```bash
 npm install copywriting-correct --save
 ```
-
-## 使用
 
 ```javascript
 import CopyWritingCorrectService from 'copywriting-correct';
@@ -95,6 +99,25 @@ const text = service.correct('在LeanCloud上，数据存储是围绕AVObject进
 2. SpaceCorrector
 3. UnitOfMeasurementCorrector
 4. ProperNounsCorrector
+
+要引用这些纠正器：
+
+浏览器：
+
+```javascript
+service.resetCorrectors([
+  window.CopyWritingCorrectors.CharacterCorrector
+]);
+```
+
+Node.js:
+
+```javascript
+import { CharacterCorrector } from 'copywriting-correct';
+service.resetCorrectors([
+  CharacterCorrector
+]);
+```
 
 ## 已实现
 

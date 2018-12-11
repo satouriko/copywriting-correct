@@ -3,6 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 let defaultSettings = require('./defaults');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -11,13 +12,16 @@ module.exports = {
   devtool: 'sourcemap',
   output: {
     path: path.join(__dirname, '/../dist'),
-    filename: 'copywriting-correct.js',
+    filename: '[name].js',
     library: 'copywriting-correct',
     libraryTarget: 'umd',
     umdNamedDefine: true,
     publicPath: defaultSettings.publicPath
   },
-  entry: path.join(__dirname, '../src/index.ts'),
+  entry: {
+    'copywriting-correct.min': path.join(__dirname, '../src/index.ts'),
+    'copywriting-correct': path.join(__dirname, '../src/index.ts'),
+  },
   cache: false,
   resolve: defaultSettings.getDefaultResolves(),
   plugins: [
@@ -38,5 +42,10 @@ module.exports = {
       logLevel: 'info'
     })
   ],
+  optimization: {
+    minimizer: [new TerserPlugin({
+      test: /\.min.js(\?.*)?$/i
+    })]
+  },
   module: defaultSettings.getDefaultModules()
 };
