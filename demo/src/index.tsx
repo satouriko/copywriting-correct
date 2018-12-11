@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Component, FormEvent } from 'react';
 import { render } from 'react-dom';
 
-import { CopyWritingCorrectService } from '../../src/CopyWritingCorrectService';
+import CopyWritingCorrectService from '../../';
 
 import './style.styl';
 

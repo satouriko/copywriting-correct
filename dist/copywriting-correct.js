@@ -520,12 +520,12 @@ exports.UnitOfMeasurementCorrector = UnitOfMeasurementCorrector_1.default;
 exports.default = CopyWritingCorrectService_1.CopyWritingCorrectService;
 if (typeof window === 'object') {
     window.CopyWritingCorrectService = CopyWritingCorrectService_1.CopyWritingCorrectService;
-    window.CopyWritingCorrectors = [
-        CharacterCorrector_1.default,
-        SpaceCorrector_1.default,
-        ProperNounsCorrector_1.default,
-        UnitOfMeasurementCorrector_1.default,
-    ];
+    window.CopyWritingCorrectors = {
+        CharacterCorrector: CharacterCorrector_1.default,
+        SpaceCorrector: SpaceCorrector_1.default,
+        ProperNounsCorrector: ProperNounsCorrector_1.default,
+        UnitOfMeasurementCorrector: UnitOfMeasurementCorrector_1.default,
+    };
 }
 
 
