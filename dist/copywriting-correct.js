@@ -7,7 +7,7 @@
 		exports["copywriting-correct"] = factory();
 	else
 		root["copywriting-correct"] = factory();
-})(window, function() {
+})((typeof window !== 'undefined' ? window : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -509,6 +509,7 @@ exports.default = UnitOfMeasurementCorrector;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var CopyWritingCorrectService_1 = __webpack_require__(6);
+exports.CopyWritingCorrectService = CopyWritingCorrectService_1.CopyWritingCorrectService;
 var CharacterCorrector_1 = __webpack_require__(0);
 exports.CharacterCorrector = CharacterCorrector_1.default;
 var ProperNounsCorrector_1 = __webpack_require__(2);

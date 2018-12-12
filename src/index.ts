@@ -10,7 +10,8 @@ export {
   CharacterCorrector,
   SpaceCorrector,
   ProperNounsCorrector,
-  UnitOfMeasurementCorrector
+  UnitOfMeasurementCorrector,
+  CopyWritingCorrectService
 };
 export { ICorrector };
 

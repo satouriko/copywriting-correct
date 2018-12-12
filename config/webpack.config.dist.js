@@ -16,7 +16,10 @@ module.exports = {
     library: 'copywriting-correct',
     libraryTarget: 'umd',
     umdNamedDefine: true,
-    publicPath: defaultSettings.publicPath
+    publicPath: defaultSettings.publicPath,
+    // webpack 4.x bug
+    // https://github.com/webpack/webpack/issues/6522
+    globalObject: "(typeof window !== 'undefined' ? window : this)"
   },
   entry: {
     'copywriting-correct.min': path.join(__dirname, '../src/index.ts'),

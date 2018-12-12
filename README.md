@@ -46,6 +46,7 @@ npm install copywriting-correct --save
 ```
 
 ```javascript
+// const CopyWritingCorrectService = require('copywriting-correct').default;
 import CopyWritingCorrectService from 'copywriting-correct';
 
 const service = new CopyWritingCorrectService();
@@ -113,6 +114,7 @@ service.resetCorrectors([
 Node.js:
 
 ```javascript
+// const CharacterCorrector = require('copywriting-correct').CharacterCorrector;
 import { CharacterCorrector } from 'copywriting-correct';
 service.resetCorrectors([
   CharacterCorrector
