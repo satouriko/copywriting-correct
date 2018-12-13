@@ -95,8 +95,8 @@ class App extends Component<{}, AppState> {
                 />
               </div>
               <div className="col-md-6 mt10">
-                <button type="button" className="btn btn-block btn-default btn-lg" id="height-c" disabled={true}>
-                  修改左侧数值调整文本框高度
+                <button type="button" className="btn btn-block btn-default btn-lg ovn" id="height-c" disabled={true}>
+                  调整文本框高度
                 </button>
               </div>
             </div>

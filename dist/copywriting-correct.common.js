@@ -91,7 +91,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1127,7 +1127,8 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
 ;
 
 /***/ }),
-/* 7 */
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1144,18 +1145,9 @@ exports.SpaceCorrector = SpaceCorrector_1.default;
 var UnitOfMeasurementCorrector_1 = __webpack_require__(4);
 exports.UnitOfMeasurementCorrector = UnitOfMeasurementCorrector_1.default;
 exports.default = CopyWritingCorrectService_1.CopyWritingCorrectService;
-(function (global) {
-    global.CopyWritingCorrectService = CopyWritingCorrectService_1.CopyWritingCorrectService;
-    global.CopyWritingCorrectors = {
-        CharacterCorrector: CharacterCorrector_1.default,
-        SpaceCorrector: SpaceCorrector_1.default,
-        ProperNounsCorrector: ProperNounsCorrector_1.default,
-        UnitOfMeasurementCorrector: UnitOfMeasurementCorrector_1.default,
-    };
-})(typeof window === 'object' ? window : this);
 
 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=copywriting-correct.js.map
+//# sourceMappingURL=copywriting-correct.common.js.map

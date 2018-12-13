@@ -22,8 +22,9 @@ module.exports = {
     globalObject: "(typeof window !== 'undefined' ? window : this)"
   },
   entry: {
-    'copywriting-correct.min': path.join(__dirname, '../src/index.ts'),
-    'copywriting-correct': path.join(__dirname, '../src/index.ts'),
+    'copywriting-correct.common': path.join(__dirname, '../src/index.ts'),
+    'copywriting-correct.min': path.join(__dirname, '../src/export.ts'),
+    'copywriting-correct': path.join(__dirname, '../src/export.ts'),
   },
   cache: false,
   resolve: defaultSettings.getDefaultResolves(),

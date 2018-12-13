@@ -14,3 +14,13 @@ export {
   CopyWritingCorrectService
 };
 export { ICorrector };
+
+((global: any) => {
+  global.CopyWritingCorrectService = CopyWritingCorrectService;
+  global.CopyWritingCorrectors = {
+    CharacterCorrector,
+    SpaceCorrector,
+    ProperNounsCorrector,
+    UnitOfMeasurementCorrector,
+  };
+})(typeof window === 'object' ? window : this);
