@@ -12,7 +12,8 @@
     "serve": "webpack-dev-server --mode=development --config=config/webpack.config.dev.js --progress",
     "dist": "node config/cleanup.js && webpack --mode=production --config=config/webpack.config.dist.js --progress",
     "build": "webpack --mode=production --config=config/webpack.config.prod.js  --progress",
-    "lint": "tslint --fix -c tslint.json --project ./"
+    "lint": "tslint --fix -c tslint.json --project ./",
+    "version": "npm run dist && git add -A dist @types"
   },
   "repository": {
     "type": "git",

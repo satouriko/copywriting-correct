@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const pkg = require('../package.json');
 
 let defaultSettings = require('./defaults');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -34,8 +35,15 @@ module.exports = {
     }),
     new WebpackCleanupPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.BannerPlugin(`${pkg.name} - ${pkg.description}
+--------
+@version ${pkg.version}
+@homepage: ${pkg.homepage}
+@license ${pkg.license}
+@author ${pkg.author}
+`),
     new BundleAnalyzerPlugin({
-      analyzerMode: 'server',
+      analyzerMode: 'disabled',
       analyzerHost: '127.0.0.1',
       analyzerPort: 8888,
       defaultSizes: 'parsed',

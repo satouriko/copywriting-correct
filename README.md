@@ -30,11 +30,11 @@ GitHub 是一个通过 Git 进行版本控制的软件源代码托管服务，�
 ## 浏览器
 
 ```html
-<script src="https://unpkg.com/copywriting-correct/dist/copywriting-correct.min.js"></script>
+<script src="https://unpkg.com/copywriting-correct"></script>
 ```
 
 ```javascript
-const service = new window.CopyWritingCorrectService();
+const service = new CopyWritingCorrectService();
 
 const text = service.correct('在LeanCloud上，数据存储是围绕AVObject进行的。');
 ```
@@ -107,7 +107,7 @@ const text = service.correct('在LeanCloud上，数据存储是围绕AVObject进
 
 ```javascript
 service.resetCorrectors([
-  window.CopyWritingCorrectors.CharacterCorrector
+  CopyWritingCorrectors.CharacterCorrector
 ]);
 ```
 
@@ -144,10 +144,20 @@ service.resetCorrectors([
 
 1. 专有名词使用正确的大小写（部分名词达成，见 [词典](https://github.com/NauxLiu/auto-correct/blob/afb60f8685a205adfe33ee342c98cc3e20d33c9e/dicts.php)）
 
+## 已知问题
+
+这个库的版本并不是严格按照 Semantic Versioning 释出的。
+PATCH 版本号的变更也可能包含纠正服务或纠正器默认行为的改变。
+如果你需要把这个库用于生产环境并且不希望它的行为在未来发生改变，
+建议你完全限定依赖的版本。
+
+有一些[已知问题](https://github.com/rikakomoe/copywriting-correct/issues)，
+建议你在使用这个库之前最好查看一下。
+
 ## 改进
 
 有什么新的想法和建议，欢迎提交 [issue](https://github.com/rikakomoe/copywriting-correct/issues) 或者 [Pull Requests](https://github.com/rikakomoe/copywriting-correct/pulls)。
 
-## License
+## 许可
 
-基于 [AGPL-v3 license](https://www.gnu.org/licenses/agpl-3.0.zh-cn.html).
+基于 [AGPL-v3 license](https://www.gnu.org/licenses/agpl-3.0.zh-cn.html)。
