@@ -1,3 +1,12 @@
+/*!
+ * copywriting-correct - 中英文文案排版纠正器
+ * --------
+ * @version 1.0.5
+ * @homepage: https://github.com/rikakomoe/copywriting-correct#readme
+ * @license AGPL-3.0
+ * @author rikakomoe
+ * 
+ */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();

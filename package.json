@@ -1,6 +1,6 @@
 {
   "name": "copywriting-correct",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "中英文文案排版纠正器",
   "main": "dist/copywriting-correct.common.js",
   "unpkg": "dist/copywriting-correct.min.js",
