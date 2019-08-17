@@ -19,7 +19,7 @@ class App extends Component<{}, AppState> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      input: '',
+      input: 'LeanCloud数据存储是围绕AVObject进行的.每个AVObject都包含了与JSON兼容的key-value对应的数据。数据是schema-free的，你不需要在每个AVObject上提前指定存在哪些键，只要直接设定对应的key-value即可。 gitHub是一个通过git进行版本控制的软件源代码托管服务，由GitHub公司（曾称Logical Awesome）的开发者Chris Wanstrath、PJ Hyett和Tom Preston-Werner使用Ruby on Rails编写而成。',
       output: '',
       rows: 18,
     };
@@ -37,13 +37,17 @@ class App extends Component<{}, AppState> {
   private inputModel(e: FormEvent<HTMLTextAreaElement>) {
     this.setState({
       input: e.currentTarget.value,
-    });
+    }, () => this.correct());
   }
 
   private rowsModel(e: FormEvent<HTMLInputElement>) {
     this.setState({
       rows: +e.currentTarget.value,
     });
+  }
+
+  public componentDidMount() {
+    this.correct();
   }
 
   public render() {
@@ -82,37 +86,20 @@ class App extends Component<{}, AppState> {
 
         <section className="invoice">
           <div className="row">
-            <div className="col-md-12">
-              <button type="button" className="btn btn-block btn-default btn-lg" id="correct"
-                      onClick={this.correct}
-              >纠正排版
-              </button>
-            </div>
-            <div className="col-md-12">
-              <div className="col-md-6 mt20">
-                <input type="number" className="form-control" value={this.state.rows} id="height"
-                       onInput={this.rowsModel} onChange={this.rowsModel}
-                />
-              </div>
-              <div className="col-md-6 mt10">
-                <button type="button" className="btn btn-block btn-default btn-lg ovn" id="height-c" disabled={true}>
-                  调整文本框高度
-                </button>
-              </div>
-            </div>
             <div className="col-md-6 mt10">
               <p>原文：</p>
               <div className="form-group">
-                <textarea className="form-control" rows={this.state.rows} id="from"
+                <textarea className="form-control textarea" rows={this.state.rows} id="from"
                           value={this.state.input} onInput={this.inputModel} onChange={this.inputModel}
+                          spellCheck={false}
                 />
               </div>
             </div>
             <div className="col-md-6 mt10">
               <p>纠正后：</p>
               <div className="form-group">
-                <textarea id="to" className="form-control" rows={this.state.rows} readOnly={true}
-                          value={this.state.output}
+                <textarea id="to" className="form-control textarea" rows={this.state.rows} readOnly={true}
+                          value={this.state.output} spellCheck={false}
                 />
               </div>
             </div>

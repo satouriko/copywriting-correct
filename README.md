@@ -1,6 +1,6 @@
 <p align="center">
 copywriting-correct
-</a>
+</p>
 
 <p align="center">中英文文案排版纠正器。</p>
 
@@ -92,9 +92,11 @@ const text = service.correct('在LeanCloud上，数据存储是围绕AVObject进
 ```
 
 
-## 默认纠正器
+## 内置纠正器
 
 **注意：纠正器的顺序会影响输出结果。**
+
+以下为默认的纠正器：
 
 1. CharacterCorrector
 2. SpaceCorrector
@@ -157,7 +159,3 @@ PATCH 版本号的变更也可能包含纠正服务或纠正器默认行为的�
 ## 改进
 
 有什么新的想法和建议，欢迎提交 [issue](https://github.com/rikakomoe/copywriting-correct/issues) 或者 [Pull Requests](https://github.com/rikakomoe/copywriting-correct/pulls)。
-
-## 许可
-
-基于 [AGPL-v3 license](https://www.gnu.org/licenses/agpl-3.0.zh-cn.html)。
