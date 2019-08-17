@@ -1,9 +1,9 @@
 /*!
  * copywriting-correct - 中英文文案排版纠正器
  * --------
- * @version 1.0.5
+ * @version 1.0.6
  * @homepage: https://github.com/rikakomoe/copywriting-correct#readme
- * @license AGPL-3.0
+ * @license MIT
  * @author rikakomoe
  * 
  */
@@ -564,14 +564,14 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
 /*!
  * pangu.js
  * --------
- * @version: 3.3.0
+ * @version: 4.0.7
  * @homepage: https://github.com/vinta/pangu.js
  * @license: MIT
  * @author: Vinta Chen <vinta.chen@gmail.com> (https://github.com/vinta)
  */
 (function webpackUniversalModuleDefinition(root, factory) {
   if (true) module.exports = factory();else {}
-})(this, function () {
+})(window, function () {
   return (
     /******/
     function (modules) {
@@ -596,25 +596,26 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
         // Check if module is in cache
 
         /******/
-        if (installedModules[moduleId])
+        if (installedModules[moduleId]) {
           /******/
           return installedModules[moduleId].exports;
-        /******/
-
+          /******/
+        }
         /******/
         // Create a new module (and put it into the cache)
 
         /******/
 
+
         var module = installedModules[moduleId] = {
           /******/
-          exports: {},
+          i: moduleId,
 
           /******/
-          id: moduleId,
+          l: false,
 
           /******/
-          loaded: false
+          exports: {}
           /******/
 
         };
@@ -633,7 +634,7 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
 
         /******/
 
-        module.loaded = true;
+        module.l = true;
         /******/
 
         /******/
@@ -666,11 +667,150 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
       /******/
 
       /******/
+      // define getter function for harmony exports
+
+      /******/
+
+      __webpack_require__.d = function (exports, name, getter) {
+        /******/
+        if (!__webpack_require__.o(exports, name)) {
+          /******/
+          Object.defineProperty(exports, name, {
+            enumerable: true,
+            get: getter
+          });
+          /******/
+        }
+        /******/
+
+      };
+      /******/
+
+      /******/
+      // define __esModule on exports
+
+      /******/
+
+
+      __webpack_require__.r = function (exports) {
+        /******/
+        if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+          /******/
+          Object.defineProperty(exports, Symbol.toStringTag, {
+            value: 'Module'
+          });
+          /******/
+        }
+        /******/
+
+
+        Object.defineProperty(exports, '__esModule', {
+          value: true
+        });
+        /******/
+      };
+      /******/
+
+      /******/
+      // create a fake namespace object
+
+      /******/
+      // mode & 1: value is a module id, require it
+
+      /******/
+      // mode & 2: merge all properties of value into the ns
+
+      /******/
+      // mode & 4: return value when already ns object
+
+      /******/
+      // mode & 8|1: behave like require
+
+      /******/
+
+
+      __webpack_require__.t = function (value, mode) {
+        /******/
+        if (mode & 1) value = __webpack_require__(value);
+        /******/
+
+        if (mode & 8) return value;
+        /******/
+
+        if (mode & 4 && typeof value === 'object' && value && value.__esModule) return value;
+        /******/
+
+        var ns = Object.create(null);
+        /******/
+
+        __webpack_require__.r(ns);
+        /******/
+
+
+        Object.defineProperty(ns, 'default', {
+          enumerable: true,
+          value: value
+        });
+        /******/
+
+        if (mode & 2 && typeof value != 'string') for (var key in value) __webpack_require__.d(ns, key, function (key) {
+          return value[key];
+        }.bind(null, key));
+        /******/
+
+        return ns;
+        /******/
+      };
+      /******/
+
+      /******/
+      // getDefaultExport function for compatibility with non-harmony modules
+
+      /******/
+
+
+      __webpack_require__.n = function (module) {
+        /******/
+        var getter = module && module.__esModule ?
+        /******/
+        function getDefault() {
+          return module['default'];
+        } :
+        /******/
+        function getModuleExports() {
+          return module;
+        };
+        /******/
+
+        __webpack_require__.d(getter, 'a', getter);
+        /******/
+
+
+        return getter;
+        /******/
+      };
+      /******/
+
+      /******/
+      // Object.prototype.hasOwnProperty.call
+
+      /******/
+
+
+      __webpack_require__.o = function (object, property) {
+        return Object.prototype.hasOwnProperty.call(object, property);
+      };
+      /******/
+
+      /******/
       // __webpack_public_path__
 
       /******/
 
+
       __webpack_require__.p = "";
+      /******/
+
       /******/
 
       /******/
@@ -678,7 +818,7 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
 
       /******/
 
-      return __webpack_require__(0);
+      return __webpack_require__(__webpack_require__.s = 0);
       /******/
     }(
     /************************************************************************/
@@ -689,10 +829,36 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
 
     /***/
     function (module, exports, __webpack_require__) {
-      'use strict';
+      var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
-      var _createClass = function () {
-        function defineProperties(target, props) {
+      (function (global, factory) {
+        if (true) {
+          !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = factory, __WEBPACK_AMD_DEFINE_RESULT__ = typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? __WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__) : __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+        } else { var mod; }
+      })(this, function () {
+        "use strict";
+
+        function _typeof(obj) {
+          if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+            _typeof = function _typeof(obj) {
+              return typeof obj;
+            };
+          } else {
+            _typeof = function _typeof(obj) {
+              return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+            };
+          }
+
+          return _typeof(obj);
+        }
+
+        function _classCallCheck(instance, Constructor) {
+          if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+          }
+        }
+
+        function _defineProperties(target, props) {
           for (var i = 0; i < props.length; i++) {
             var descriptor = props[i];
             descriptor.enumerable = descriptor.enumerable || false;
@@ -702,317 +868,518 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
           }
         }
 
-        return function (Constructor, protoProps, staticProps) {
-          if (protoProps) defineProperties(Constructor.prototype, protoProps);
-          if (staticProps) defineProperties(Constructor, staticProps);
+        function _createClass(Constructor, protoProps, staticProps) {
+          if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+          if (staticProps) _defineProperties(Constructor, staticProps);
           return Constructor;
-        };
-      }();
-
-      function _classCallCheck(instance, Constructor) {
-        if (!(instance instanceof Constructor)) {
-          throw new TypeError("Cannot call a class as a function");
-        }
-      }
-
-      function _possibleConstructorReturn(self, call) {
-        if (!self) {
-          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
         }
 
-        return call && (typeof call === "object" || typeof call === "function") ? call : self;
-      }
-
-      function _inherits(subClass, superClass) {
-        if (typeof superClass !== "function" && superClass !== null) {
-          throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-        }
-
-        subClass.prototype = Object.create(superClass && superClass.prototype, {
-          constructor: {
-            value: subClass,
-            enumerable: false,
-            writable: true,
-            configurable: true
+        function _possibleConstructorReturn(self, call) {
+          if (call && (_typeof(call) === "object" || typeof call === "function")) {
+            return call;
           }
-        });
-        if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-      }
 
-      var Pangu = __webpack_require__(1).Pangu; // https://developer.mozilla.org/en/docs/Web/API/Node/nodeType
-
-
-      var COMMENT_NODE_TYPE = 8;
-
-      var BrowserPangu = function (_Pangu) {
-        _inherits(BrowserPangu, _Pangu);
-
-        function BrowserPangu() {
-          _classCallCheck(this, BrowserPangu);
-
-          var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BrowserPangu).call(this));
-
-          _this.topTags = /^(html|head|body|#document)$/i;
-          _this.ignoreTags = /^(script|code|pre|textarea)$/i;
-          _this.spaceSensitiveTags = /^(a|del|pre|s|strike|u)$/i;
-          _this.spaceLikeTags = /^(br|hr|i|img|pangu)$/i;
-          _this.blockTags = /^(div|h1|h2|h3|h4|h5|h6|p)$/i; // TODO
-          // this.ignoreClasses
-          // this.ignoreAttributes
-
-          return _this;
+          return _assertThisInitialized(self);
         }
 
-        _createClass(BrowserPangu, [{
-          key: 'canIgnoreNode',
-          value: function canIgnoreNode(node) {
-            var parentNode = node.parentNode;
+        function _assertThisInitialized(self) {
+          if (self === void 0) {
+            throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          }
 
-            while (parentNode && parentNode.nodeName && parentNode.nodeName.search(this.topTags) === -1) {
-              if (parentNode.nodeName.search(this.ignoreTags) >= 0 || parentNode.isContentEditable || parentNode.getAttribute('g_editable') === 'true') {
+          return self;
+        }
+
+        function _getPrototypeOf(o) {
+          _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+            return o.__proto__ || Object.getPrototypeOf(o);
+          };
+          return _getPrototypeOf(o);
+        }
+
+        function _inherits(subClass, superClass) {
+          if (typeof superClass !== "function" && superClass !== null) {
+            throw new TypeError("Super expression must either be null or a function");
+          }
+
+          subClass.prototype = Object.create(superClass && superClass.prototype, {
+            constructor: {
+              value: subClass,
+              writable: true,
+              configurable: true
+            }
+          });
+          if (superClass) _setPrototypeOf(subClass, superClass);
+        }
+
+        function _setPrototypeOf(o, p) {
+          _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+            o.__proto__ = p;
+            return o;
+          };
+
+          return _setPrototypeOf(o, p);
+        }
+
+        var _require = __webpack_require__(1),
+            Pangu = _require.Pangu;
+
+        function once(func) {
+          var _this = this,
+              _arguments = arguments;
+
+          var executed = false;
+          return function () {
+            if (executed) {
+              return;
+            }
+
+            var self = _this;
+            executed = true;
+            func.apply(self, _arguments);
+          };
+        }
+
+        function debounce(func, delay, mustRunDelay) {
+          var _this2 = this,
+              _arguments2 = arguments;
+
+          var timer = null;
+          var startTime = null;
+          return function () {
+            var self = _this2;
+            var args = _arguments2;
+            var currentTime = +new Date();
+            clearTimeout(timer);
+
+            if (!startTime) {
+              startTime = currentTime;
+            }
+
+            if (currentTime - startTime >= mustRunDelay) {
+              func.apply(self, args);
+              startTime = currentTime;
+            } else {
+              timer = setTimeout(function () {
+                func.apply(self, args);
+              }, delay);
+            }
+          };
+        }
+
+        var BrowserPangu = function (_Pangu) {
+          _inherits(BrowserPangu, _Pangu);
+
+          function BrowserPangu() {
+            var _this3;
+
+            _classCallCheck(this, BrowserPangu);
+
+            _this3 = _possibleConstructorReturn(this, _getPrototypeOf(BrowserPangu).call(this));
+            _this3.blockTags = /^(div|p|h1|h2|h3|h4|h5|h6)$/i;
+            _this3.ignoredTags = /^(script|code|pre|textarea)$/i;
+            _this3.presentationalTags = /^(b|code|del|em|i|s|strong)$/i;
+            _this3.spaceLikeTags = /^(br|hr|i|img|pangu)$/i;
+            _this3.spaceSensitiveTags = /^(a|del|pre|s|strike|u)$/i;
+            _this3.isAutoSpacingPageExecuted = false;
+            return _this3;
+          }
+
+          _createClass(BrowserPangu, [{
+            key: "isContentEditable",
+            value: function isContentEditable(node) {
+              return node.isContentEditable || node.getAttribute && node.getAttribute('g_editable') === 'true';
+            }
+          }, {
+            key: "isSpecificTag",
+            value: function isSpecificTag(node, tagRegex) {
+              return node && node.nodeName && node.nodeName.search(tagRegex) >= 0;
+            }
+          }, {
+            key: "isInsideSpecificTag",
+            value: function isInsideSpecificTag(node, tagRegex) {
+              var checkCurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+              var currentNode = node;
+
+              if (checkCurrent) {
+                if (this.isSpecificTag(currentNode, tagRegex)) {
+                  return true;
+                }
+              }
+
+              while (currentNode.parentNode) {
+                currentNode = currentNode.parentNode;
+
+                if (this.isSpecificTag(currentNode, tagRegex)) {
+                  return true;
+                }
+              }
+
+              return false;
+            }
+          }, {
+            key: "canIgnoreNode",
+            value: function canIgnoreNode(node) {
+              var currentNode = node;
+
+              if (currentNode && (this.isSpecificTag(currentNode, this.ignoredTags) || this.isContentEditable(currentNode))) {
                 return true;
               }
 
-              parentNode = parentNode.parentNode;
-            }
+              while (currentNode.parentNode) {
+                currentNode = currentNode.parentNode;
 
-            return false;
-          }
-        }, {
-          key: 'isFirstTextChild',
-          value: function isFirstTextChild(parentNode, targetNode) {
-            var childNodes = parentNode.childNodes; // 只判斷第一個含有 text 的 node
-
-            for (var i = 0; i < childNodes.length; i++) {
-              var childNode = childNodes[i];
-
-              if (childNode.nodeType !== COMMENT_NODE_TYPE && childNode.textContent) {
-                return childNode === targetNode;
-              }
-            }
-
-            return false;
-          }
-        }, {
-          key: 'isLastTextChild',
-          value: function isLastTextChild(parentNode, targetNode) {
-            var childNodes = parentNode.childNodes; // 只判斷倒數第一個含有 text 的 node
-
-            for (var i = childNodes.length - 1; i > -1; i--) {
-              var childNode = childNodes[i];
-
-              if (childNode.nodeType !== COMMENT_NODE_TYPE && childNode.textContent) {
-                return childNode === targetNode;
-              }
-            }
-
-            return false;
-          }
-        }, {
-          key: 'spacingNodeByXPath',
-          value: function spacingNodeByXPath(xPathQuery, contextNode) {
-            // 因為 xPathQuery 會是用 text() 結尾，所以這些 nodes 會是 text 而不是 DOM element
-            // snapshotLength 要配合 XPathResult.ORDERED_NODE_SNAPSHOT_TYPE 使用
-            // https://developer.mozilla.org/en-US/docs/DOM/document.evaluate
-            // https://developer.mozilla.org/en-US/docs/Web/API/XPathResult
-            var textNodes = document.evaluate(xPathQuery, contextNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-            var currentTextNode = void 0;
-            var nextTextNode = void 0; // 從最下面、最裡面的節點開始，所以是倒序的
-
-            for (var i = textNodes.snapshotLength - 1; i > -1; --i) {
-              currentTextNode = textNodes.snapshotItem(i);
-
-              if (this.canIgnoreNode(currentTextNode)) {
-                nextTextNode = currentTextNode;
-                continue;
+                if (currentNode && (this.isSpecificTag(currentNode, this.ignoredTags) || this.isContentEditable(currentNode))) {
+                  return true;
+                }
               }
 
-              var newText = this.spacing(currentTextNode.data);
+              return false;
+            }
+          }, {
+            key: "isFirstTextChild",
+            value: function isFirstTextChild(parentNode, targetNode) {
+              var childNodes = parentNode.childNodes;
 
-              if (currentTextNode.data !== newText) {
-                currentTextNode.data = newText;
-              } // 處理嵌套的 <tag> 中的文字
+              for (var i = 0; i < childNodes.length; i++) {
+                var childNode = childNodes[i];
 
+                if (childNode.nodeType !== Node.COMMENT_NODE && childNode.textContent) {
+                  return childNode === targetNode;
+                }
+              }
 
-              if (nextTextNode) {
-                // TODO
-                // 現在只是簡單地判斷相鄰的下一個 node 是不是 <br>
-                // 萬一遇上嵌套的標籤就不行了
-                if (currentTextNode.nextSibling && currentTextNode.nextSibling.nodeName.search(this.spaceLikeTags) >= 0) {
-                  nextTextNode = currentTextNode;
-                  continue;
-                } // currentTextNode 的最後一個字 + nextTextNode 的第一個字
+              return false;
+            }
+          }, {
+            key: "isLastTextChild",
+            value: function isLastTextChild(parentNode, targetNode) {
+              var childNodes = parentNode.childNodes;
 
+              for (var i = childNodes.length - 1; i > -1; i--) {
+                var childNode = childNodes[i];
 
-                var testText = currentTextNode.data.toString().substr(-1) + nextTextNode.data.toString().substr(0, 1);
-                var testNewText = this.spacing(testText);
+                if (childNode.nodeType !== Node.COMMENT_NODE && childNode.textContent) {
+                  return childNode === targetNode;
+                }
+              }
 
-                if (testNewText !== testText) {
-                  // 往上找 nextTextNode 的 parent node
-                  // 直到遇到 spaceSensitiveTags
-                  // 而且 nextTextNode 必須是第一個 text child
-                  // 才能把空格加在 nextTextNode 的前面
-                  var nextNode = nextTextNode;
+              return false;
+            }
+          }, {
+            key: "spacingNodeByXPath",
+            value: function spacingNodeByXPath(xPathQuery, contextNode) {
+              if (!(contextNode instanceof Node) || contextNode instanceof DocumentFragment) {
+                return;
+              }
 
-                  while (nextNode.parentNode && nextNode.nodeName.search(this.spaceSensitiveTags) === -1 && this.isFirstTextChild(nextNode.parentNode, nextNode)) {
-                    nextNode = nextNode.parentNode;
-                  }
+              var textNodes = document.evaluate(xPathQuery, contextNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+              var currentTextNode;
+              var nextTextNode;
 
-                  var currentNode = currentTextNode;
+              for (var i = textNodes.snapshotLength - 1; i > -1; --i) {
+                currentTextNode = textNodes.snapshotItem(i);
 
-                  while (currentNode.parentNode && currentNode.nodeName.search(this.spaceSensitiveTags) === -1 && this.isLastTextChild(currentNode.parentNode, currentNode)) {
-                    currentNode = currentNode.parentNode;
-                  }
+                if (this.isSpecificTag(currentTextNode.parentNode, this.presentationalTags) && !this.isInsideSpecificTag(currentTextNode.parentNode, this.ignoredTags)) {
+                  var elementNode = currentTextNode.parentNode;
 
-                  if (currentNode.nextSibling) {
-                    if (currentNode.nextSibling.nodeName.search(this.spaceLikeTags) >= 0) {
-                      nextTextNode = currentTextNode;
-                      continue;
+                  if (elementNode.previousSibling) {
+                    var previousSibling = elementNode.previousSibling;
+
+                    if (previousSibling.nodeType === Node.TEXT_NODE) {
+                      var testText = previousSibling.data.substr(-1) + currentTextNode.data.toString().charAt(0);
+                      var testNewText = this.spacing(testText);
+
+                      if (testText !== testNewText) {
+                        previousSibling.data = "".concat(previousSibling.data, " ");
+                      }
                     }
                   }
 
-                  if (currentNode.nodeName.search(this.blockTags) === -1) {
-                    if (nextNode.nodeName.search(this.spaceSensitiveTags) === -1) {
-                      if (nextNode.nodeName.search(this.ignoreTags) === -1 && nextNode.nodeName.search(this.blockTags) === -1) {
-                        if (nextTextNode.previousSibling) {
-                          if (nextTextNode.previousSibling.nodeName.search(this.spaceLikeTags) === -1) {
-                            nextTextNode.data = ' ' + nextTextNode.data;
+                  if (elementNode.nextSibling) {
+                    var nextSibling = elementNode.nextSibling;
+
+                    if (nextSibling.nodeType === Node.TEXT_NODE) {
+                      var _testText = currentTextNode.data.substr(-1) + nextSibling.data.toString().charAt(0);
+
+                      var _testNewText = this.spacing(_testText);
+
+                      if (_testText !== _testNewText) {
+                        nextSibling.data = " ".concat(nextSibling.data);
+                      }
+                    }
+                  }
+                }
+
+                if (this.canIgnoreNode(currentTextNode)) {
+                  nextTextNode = currentTextNode;
+                  continue;
+                }
+
+                var newText = this.spacing(currentTextNode.data);
+
+                if (currentTextNode.data !== newText) {
+                  currentTextNode.data = newText;
+                }
+
+                if (nextTextNode) {
+                  if (currentTextNode.nextSibling && currentTextNode.nextSibling.nodeName.search(this.spaceLikeTags) >= 0) {
+                    nextTextNode = currentTextNode;
+                    continue;
+                  }
+
+                  var _testText2 = currentTextNode.data.toString().substr(-1) + nextTextNode.data.toString().substr(0, 1);
+
+                  var _testNewText2 = this.spacing(_testText2);
+
+                  if (_testNewText2 !== _testText2) {
+                    var nextNode = nextTextNode;
+
+                    while (nextNode.parentNode && nextNode.nodeName.search(this.spaceSensitiveTags) === -1 && this.isFirstTextChild(nextNode.parentNode, nextNode)) {
+                      nextNode = nextNode.parentNode;
+                    }
+
+                    var currentNode = currentTextNode;
+
+                    while (currentNode.parentNode && currentNode.nodeName.search(this.spaceSensitiveTags) === -1 && this.isLastTextChild(currentNode.parentNode, currentNode)) {
+                      currentNode = currentNode.parentNode;
+                    }
+
+                    if (currentNode.nextSibling) {
+                      if (currentNode.nextSibling.nodeName.search(this.spaceLikeTags) >= 0) {
+                        nextTextNode = currentTextNode;
+                        continue;
+                      }
+                    }
+
+                    if (currentNode.nodeName.search(this.blockTags) === -1) {
+                      if (nextNode.nodeName.search(this.spaceSensitiveTags) === -1) {
+                        if (nextNode.nodeName.search(this.ignoredTags) === -1 && nextNode.nodeName.search(this.blockTags) === -1) {
+                          if (nextTextNode.previousSibling) {
+                            if (nextTextNode.previousSibling.nodeName.search(this.spaceLikeTags) === -1) {
+                              nextTextNode.data = " ".concat(nextTextNode.data);
+                            }
+                          } else {
+                            if (!this.canIgnoreNode(nextTextNode)) {
+                              nextTextNode.data = " ".concat(nextTextNode.data);
+                            }
+                          }
+                        }
+                      } else if (currentNode.nodeName.search(this.spaceSensitiveTags) === -1) {
+                        currentTextNode.data = "".concat(currentTextNode.data, " ");
+                      } else {
+                        var panguSpace = document.createElement('pangu');
+                        panguSpace.innerHTML = ' ';
+
+                        if (nextNode.previousSibling) {
+                          if (nextNode.previousSibling.nodeName.search(this.spaceLikeTags) === -1) {
+                            nextNode.parentNode.insertBefore(panguSpace, nextNode);
                           }
                         } else {
-                          // dirty hack
-                          if (!this.canIgnoreNode(nextTextNode)) {
-                            nextTextNode.data = ' ' + nextTextNode.data;
-                          }
-                        }
-                      }
-                    } else if (currentNode.nodeName.search(this.spaceSensitiveTags) === -1) {
-                      currentTextNode.data = currentTextNode.data + ' ';
-                    } else {
-                      var panguSpace = document.createElement('pangu');
-                      panguSpace.innerHTML = ' '; // 避免一直被加空格
-
-                      if (nextNode.previousSibling) {
-                        if (nextNode.previousSibling.nodeName.search(this.spaceLikeTags) === -1) {
                           nextNode.parentNode.insertBefore(panguSpace, nextNode);
                         }
-                      } else {
-                        nextNode.parentNode.insertBefore(panguSpace, nextNode);
-                      } // TODO
-                      // 主要是想要避免在元素（通常都是 <li>）的開頭加空格
-                      // 這個做法有點蠢，但是不管還是先硬上
 
-
-                      if (!panguSpace.previousElementSibling) {
-                        if (panguSpace.parentNode) {
-                          panguSpace.parentNode.removeChild(panguSpace);
+                        if (!panguSpace.previousElementSibling) {
+                          if (panguSpace.parentNode) {
+                            panguSpace.parentNode.removeChild(panguSpace);
+                          }
                         }
                       }
                     }
                   }
                 }
+
+                nextTextNode = currentTextNode;
+              }
+            }
+          }, {
+            key: "spacingNode",
+            value: function spacingNode(contextNode) {
+              var xPathQuery = './/*/text()[normalize-space(.)]';
+
+              if (contextNode.children && contextNode.children.length === 0) {
+                xPathQuery = './/text()[normalize-space(.)]';
               }
 
-              nextTextNode = currentTextNode;
+              this.spacingNodeByXPath(xPathQuery, contextNode);
             }
-          }
-        }, {
-          key: 'spacingNode',
-          value: function spacingNode(contextNode) {
-            var xPathQuery = './/*/text()[normalize-space(.)]';
-            this.spacingNodeByXPath(xPathQuery, contextNode);
-          }
-        }, {
-          key: 'spacingElementById',
-          value: function spacingElementById(idName) {
-            var xPathQuery = 'id("' + idName + '")//text()';
-            this.spacingNodeByXPath(xPathQuery, document);
-          }
-        }, {
-          key: 'spacingElementByClassName',
-          value: function spacingElementByClassName(className) {
-            var xPathQuery = '//*[contains(concat(" ", normalize-space(@class), " "), "' + className + '")]//text()';
-            this.spacingNodeByXPath(xPathQuery, document);
-          }
-        }, {
-          key: 'spacingElementByTagName',
-          value: function spacingElementByTagName(tagName) {
-            var xPathQuery = '//' + tagName + '//text()';
-            this.spacingNodeByXPath(xPathQuery, document);
-          }
-        }, {
-          key: 'spacingPageTitle',
-          value: function spacingPageTitle() {
-            var xPathQuery = '/html/head/title/text()';
-            this.spacingNodeByXPath(xPathQuery, document);
-          }
-        }, {
-          key: 'spacingPageBody',
-          value: function spacingPageBody() {
-            // // >> 任意位置的節點
-            // . >> 當前節點
-            // .. >> 父節點
-            // [] >> 條件
-            // text() >> 節點的文字內容，例如 hello 之於 <tag>hello</tag>
-            //
-            // [@contenteditable]
-            // 帶有 contenteditable 屬性的節點
-            //
-            // normalize-space(.)
-            // 當前節點的頭尾的空白字元都會被移除，大於兩個以上的空白字元會被置換成單一空白
-            // https://developer.mozilla.org/en-US/docs/XPath/Functions/normalize-space
-            //
-            // name(..)
-            // 父節點的名稱
-            // https://developer.mozilla.org/en-US/docs/XPath/Functions/name
-            //
-            // translate(string, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz")
-            // 將 string 轉換成小寫，因為 XML 是 case-sensitive 的
-            // https://developer.mozilla.org/en-US/docs/XPath/Functions/translate
-            //
-            // 1. 處理 <title>
-            // 2. 處理 <body> 底下的節點
-            // 3. 略過 contentEditable 的節點
-            // 4. 略過特定節點，例如 <script> 和 <style>
-            //
-            // 注意，以下的 query 只會取出各節點的 text 內容！
-            var xPathQuery = '/html/body//*/text()[normalize-space(.)]';
-            var _arr = ['script', 'style', 'textarea'];
-
-            for (var _i = 0; _i < _arr.length; _i++) {
-              var tag = _arr[_i]; // 理論上這幾個 tag 裡面不會包含其他 tag
-              // 所以可以直接用 .. 取父節點
-              // ex: [translate(name(..), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz") != "script"]
-
-              xPathQuery += '[translate(name(..),"ABCDEFGHIJKLMNOPQRSTUVWXYZ","abcdefghijklmnopqrstuvwxyz")!="' + tag + '"]';
+          }, {
+            key: "spacingElementById",
+            value: function spacingElementById(idName) {
+              var xPathQuery = "id(\"".concat(idName, "\")//text()");
+              this.spacingNodeByXPath(xPathQuery, document);
             }
+          }, {
+            key: "spacingElementByClassName",
+            value: function spacingElementByClassName(className) {
+              var xPathQuery = "//*[contains(concat(\" \", normalize-space(@class), \" \"), \"".concat(className, "\")]//text()");
+              this.spacingNodeByXPath(xPathQuery, document);
+            }
+          }, {
+            key: "spacingElementByTagName",
+            value: function spacingElementByTagName(tagName) {
+              var xPathQuery = "//".concat(tagName, "//text()");
+              this.spacingNodeByXPath(xPathQuery, document);
+            }
+          }, {
+            key: "spacingPageTitle",
+            value: function spacingPageTitle() {
+              var xPathQuery = '/html/head/title/text()';
+              this.spacingNodeByXPath(xPathQuery, document);
+            }
+          }, {
+            key: "spacingPageBody",
+            value: function spacingPageBody() {
+              var xPathQuery = '/html/body//*/text()[normalize-space(.)]';
+              ['script', 'style', 'textarea'].forEach(function (tag) {
+                xPathQuery = "".concat(xPathQuery, "[translate(name(..),\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\",\"abcdefghijklmnopqrstuvwxyz\")!=\"").concat(tag, "\"]");
+              });
+              this.spacingNodeByXPath(xPathQuery, document);
+            }
+          }, {
+            key: "spacingPage",
+            value: function spacingPage() {
+              this.spacingPageTitle();
+              this.spacingPageBody();
+            }
+          }, {
+            key: "autoSpacingPage",
+            value: function autoSpacingPage() {
+              var pageDelay = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1000;
+              var nodeDelay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+              var nodeMaxWait = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2000;
 
-            this.spacingNodeByXPath(xPathQuery, document);
-          } // TODO: 支援 callback 和 promise
+              if (!(document.body instanceof Node)) {
+                return;
+              }
 
-        }, {
-          key: 'spacingPage',
-          value: function spacingPage() {
-            this.spacingPageTitle();
-            this.spacingPageBody();
-          }
-        }]);
+              if (this.isAutoSpacingPageExecuted) {
+                return;
+              }
 
-        return BrowserPangu;
-      }(Pangu);
+              this.isAutoSpacingPageExecuted = true;
+              var self = this;
+              var onceSpacingPage = once(function () {
+                self.spacingPage();
+              });
+              var videos = document.getElementsByTagName('video');
 
-      var pangu = new BrowserPangu();
-      exports = module.exports = pangu;
-      exports.Pangu = BrowserPangu;
+              if (videos.length === 0) {
+                setTimeout(function () {
+                  onceSpacingPage();
+                }, pageDelay);
+              } else {
+                for (var i = 0; i < videos.length; i++) {
+                  var video = videos[i];
+
+                  if (video.readyState === 4) {
+                    setTimeout(function () {
+                      onceSpacingPage();
+                    }, 3000);
+                    break;
+                  }
+
+                  video.addEventListener('loadeddata', function () {
+                    setTimeout(function () {
+                      onceSpacingPage();
+                    }, 4000);
+                  });
+                }
+              }
+
+              var queue = [];
+              var debouncedSpacingNodes = debounce(function () {
+                while (queue.length) {
+                  var node = queue.shift();
+
+                  if (node) {
+                    self.spacingNode(node);
+                  }
+                }
+              }, nodeDelay, {
+                'maxWait': nodeMaxWait
+              });
+              var mutationObserver = new MutationObserver(function (mutations, observer) {
+                mutations.forEach(function (mutation) {
+                  switch (mutation.type) {
+                    case 'childList':
+                      mutation.addedNodes.forEach(function (node) {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
+                          queue.push(node);
+                        } else if (node.nodeType === Node.TEXT_NODE) {
+                          queue.push(node.parentNode);
+                        }
+                      });
+                      break;
+
+                    case 'characterData':
+                      var node = mutation.target;
+
+                      if (node.nodeType === Node.TEXT_NODE) {
+                        queue.push(node.parentNode);
+                      }
+
+                      break;
+
+                    default:
+                      break;
+                  }
+                });
+                debouncedSpacingNodes();
+              });
+              mutationObserver.observe(document.body, {
+                characterData: true,
+                childList: true,
+                subtree: true
+              });
+            }
+          }]);
+
+          return BrowserPangu;
+        }(Pangu);
+
+        var pangu = new BrowserPangu();
+        module.exports = pangu;
+        module.exports.default = pangu;
+        module.exports.Pangu = BrowserPangu;
+      });
       /***/
+
     },
     /* 1 */
 
     /***/
-    function (module, exports) {
-      'use strict';
+    function (module, exports, __webpack_require__) {
+      var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
-      var _createClass = function () {
-        function defineProperties(target, props) {
+      (function (global, factory) {
+        if (true) {
+          !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = factory, __WEBPACK_AMD_DEFINE_RESULT__ = typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? __WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__) : __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+        } else { var mod; }
+      })(this, function () {
+        "use strict";
+
+        function _typeof(obj) {
+          if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+            _typeof = function _typeof(obj) {
+              return typeof obj;
+            };
+          } else {
+            _typeof = function _typeof(obj) {
+              return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+            };
+          }
+
+          return _typeof(obj);
+        }
+
+        function _classCallCheck(instance, Constructor) {
+          if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+          }
+        }
+
+        function _defineProperties(target, props) {
           for (var i = 0; i < props.length; i++) {
             var descriptor = props[i];
             descriptor.enumerable = descriptor.enumerable || false;
@@ -1022,118 +1389,140 @@ exports.CopyWritingCorrectService = CopyWritingCorrectService;
           }
         }
 
-        return function (Constructor, protoProps, staticProps) {
-          if (protoProps) defineProperties(Constructor.prototype, protoProps);
-          if (staticProps) defineProperties(Constructor, staticProps);
+        function _createClass(Constructor, protoProps, staticProps) {
+          if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+          if (staticProps) _defineProperties(Constructor, staticProps);
           return Constructor;
-        };
-      }();
-
-      function _classCallCheck(instance, Constructor) {
-        if (!(instance instanceof Constructor)) {
-          throw new TypeError("Cannot call a class as a function");
-        }
-      } // CJK is short for Chinese, Japanese and Korean.
-      //
-      // The constant cjk contains following Unicode blocks:
-      // 	\u2e80-\u2eff CJK Radicals Supplement
-      // 	\u2f00-\u2fdf Kangxi Radicals
-      // 	\u3040-\u309f Hiragana
-      // 	\u30a0-\u30ff Katakana
-      // 	\u3100-\u312f Bopomofo
-      // 	\u3200-\u32ff Enclosed CJK Letters and Months
-      // 	\u3400-\u4dbf CJK Unified Ideographs Extension A
-      // 	\u4e00-\u9fff CJK Unified Ideographs
-      // 	\uf900-\ufaff CJK Compatibility Ideographs
-      //
-      // For more information about Unicode blocks, see
-      // 	http://unicode-table.com/en/
-      //  https://github.com/vinta/pangu
-      // ANS is short for Alphabets, Numbers and Symbols (`~!@#$%^&*()-_=+[]{}\|;:'",<.>/?).
-      //
-      // CAUTION: those ANS in following constants do not contain all symbols above.
-      // cjkQuote >> 跟 Go 版差了一個 '
-      // quoteCJK >> 跟 Go 版差了一個 '
-
-
-      var cjkQuote = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])(["])/g;
-      var quoteCJK = /(["])([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-      var fixQuote = /(["']+)(\s*)(.+?)(\s*)(["']+)/g;
-      var fixSingleQuote = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])( )(')([A-Za-z])/g;
-      var hashANSCJKhash = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])(#)([A-Za-z0-9\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+)(#)([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-      var cjkHash = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])(#([^ ]))/g;
-      var hashCJK = /(([^ ])#)([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-      var cjkOperatorANS = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])([\+\-\*\/=&\\|<>])([A-Za-z0-9])/g;
-      var ansOperatorCJK = /([A-Za-z0-9])([\+\-\*\/=&\\|<>])([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-      var cjkBracketCJK = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])([\(\[\{<\u201c]+(.*?)[\)\]\}>\u201d]+)([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-      var cjkBracket = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])([\(\[\{<\u201c>])/g;
-      var bracketCJK = /([\)\]\}>\u201d<])([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-      var fixBracket = /([\(\[\{<\u201c]+)(\s*)(.+?)(\s*)([\)\]\}>\u201d]+)/;
-      var fixSymbol = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])([~!;:,\.\?\u2026])([A-Za-z0-9])/g;
-      var cjkANS = /([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])([A-Za-z0-9`\$%\^&\*\-=\+\\\|/@\u00a1-\u00ff\u2022\u2027\u2150-\u218f])/g;
-      var ansCJK = /([A-Za-z0-9`~\$%\^&\*\-=\+\\\|/!;:,\.\?\u00a1-\u00ff\u2022\u2026\u2027\u2150-\u218f])([\u2e80-\u2eff\u2f00-\u2fdf\u3040-\u309f\u30a0-\u30ff\u3100-\u312f\u3200-\u32ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])/g;
-
-      var Pangu = function () {
-        function Pangu() {
-          _classCallCheck(this, Pangu);
         }
 
-        _createClass(Pangu, [{
-          key: 'spacing',
-          value: function spacing(text) {
-            var newText = text;
-            newText = newText.replace(cjkQuote, '$1 $2');
-            newText = newText.replace(quoteCJK, '$1 $2');
-            newText = newText.replace(fixQuote, '$1$3$5');
-            newText = newText.replace(fixSingleQuote, '$1$3$4');
-            newText = newText.replace(hashANSCJKhash, '$1 $2$3$4 $5');
-            newText = newText.replace(cjkHash, '$1 $2');
-            newText = newText.replace(hashCJK, '$1 $3');
-            newText = newText.replace(cjkOperatorANS, '$1 $2 $3');
-            newText = newText.replace(ansOperatorCJK, '$1 $2 $3');
-            var oldText = newText;
-            var tmpText = newText.replace(cjkBracketCJK, '$1 $2 $4');
-            newText = tmpText;
+        var CJK = "\u2E80-\u2EFF\u2F00-\u2FDF\u3040-\u309F\u30A0-\u30FA\u30FC-\u30FF\u3100-\u312F\u3200-\u32FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF";
+        var ANY_CJK = new RegExp("[".concat(CJK, "]"));
+        var CONVERT_TO_FULLWIDTH_CJK_SYMBOLS_CJK = new RegExp("([".concat(CJK, "])[ ]*([\\:]+|\\.)[ ]*([").concat(CJK, "])"), 'g');
+        var CONVERT_TO_FULLWIDTH_CJK_SYMBOLS = new RegExp("([".concat(CJK, "])[ ]*([~\\!;,\\?]+)[ ]*"), 'g');
+        var DOTS_CJK = new RegExp("([\\.]{2,}|\u2026)([".concat(CJK, "])"), 'g');
+        var FIX_CJK_COLON_ANS = new RegExp("([".concat(CJK, "])\\:([A-Z0-9\\(\\)])"), 'g');
+        var CJK_QUOTE = new RegExp("([".concat(CJK, "])([`\"\u05F4])"), 'g');
+        var QUOTE_CJK = new RegExp("([`\"\u05F4])([".concat(CJK, "])"), 'g');
+        var FIX_QUOTE_ANY_QUOTE = /([`"\u05f4]+)[ ]*(.+?)[ ]*([`"\u05f4]+)/g;
+        var CJK_SINGLE_QUOTE_BUT_POSSESSIVE = new RegExp("([".concat(CJK, "])('[^s])"), 'g');
+        var SINGLE_QUOTE_CJK = new RegExp("(')([".concat(CJK, "])"), 'g');
+        var FIX_POSSESSIVE_SINGLE_QUOTE = new RegExp("([A-Za-z0-9".concat(CJK, "])( )('s)"), 'g');
+        var HASH_ANS_CJK_HASH = new RegExp("([".concat(CJK, "])(#)([").concat(CJK, "]+)(#)([").concat(CJK, "])"), 'g');
+        var CJK_HASH = new RegExp("([".concat(CJK, "])(#([^ ]))"), 'g');
+        var HASH_CJK = new RegExp("(([^ ])#)([".concat(CJK, "])"), 'g');
+        var CJK_OPERATOR_ANS = new RegExp("([".concat(CJK, "])([\\+\\-\\*\\/=&\\|<>])([A-Za-z0-9])"), 'g');
+        var ANS_OPERATOR_CJK = new RegExp("([A-Za-z0-9])([\\+\\-\\*\\/=&\\|<>])([".concat(CJK, "])"), 'g');
+        var FIX_SLASH_AS = /([/]) ([a-z\-_\./]+)/g;
+        var FIX_SLASH_AS_SLASH = /([/\.])([A-Za-z\-_\./]+) ([/])/g;
+        var CJK_LEFT_BRACKET = new RegExp("([".concat(CJK, "])([\\(\\[\\{<>\u201C])"), 'g');
+        var RIGHT_BRACKET_CJK = new RegExp("([\\)\\]\\}<>\u201D])([".concat(CJK, "])"), 'g');
+        var FIX_LEFT_BRACKET_ANY_RIGHT_BRACKET = /([\(\[\{<\u201c]+)[ ]*(.+?)[ ]*([\)\]\}>\u201d]+)/;
+        var ANS_CJK_LEFT_BRACKET_ANY_RIGHT_BRACKET = new RegExp("([A-Za-z0-9".concat(CJK, "])[ ]*([\u201C])([A-Za-z0-9").concat(CJK, "\\-_ ]+)([\u201D])"), 'g');
+        var LEFT_BRACKET_ANY_RIGHT_BRACKET_ANS_CJK = new RegExp("([\u201C])([A-Za-z0-9".concat(CJK, "\\-_ ]+)([\u201D])[ ]*([A-Za-z0-9").concat(CJK, "])"), 'g');
+        var AN_LEFT_BRACKET = /([A-Za-z0-9])([\(\[\{])/g;
+        var RIGHT_BRACKET_AN = /([\)\]\}])([A-Za-z0-9])/g;
+        var CJK_ANS = new RegExp("([".concat(CJK, "])([A-Za-z\u0370-\u03FF0-9@\\$%\\^&\\*\\-\\+\\\\=\\|/\xA1-\xFF\u2150-\u218F\u2700\u2014\u27BF])"), 'g');
+        var ANS_CJK = new RegExp("([A-Za-z\u0370-\u03FF0-9~\\$%\\^&\\*\\-\\+\\\\=\\|/!;:,\\.\\?\xA1-\xFF\u2150-\u218F\u2700\u2014\u27BF])([".concat(CJK, "])"), 'g');
+        var S_A = /(%)([A-Za-z])/g;
+        var MIDDLE_DOT = /([ ]*)([\u00b7\u2022\u2027])([ ]*)/g;
 
-            if (oldText === tmpText) {
-              newText = newText.replace(cjkBracket, '$1 $2');
-              newText = newText.replace(bracketCJK, '$1 $2');
-            }
+        var Pangu = function () {
+          function Pangu() {
+            _classCallCheck(this, Pangu);
 
-            newText = newText.replace(fixBracket, '$1$3$5');
-            newText = newText.replace(fixSymbol, '$1$2 $3');
-            newText = newText.replace(cjkANS, '$1 $2');
-            newText = newText.replace(ansCJK, '$1 $2');
-            return newText;
+            this.version = '4.0.7';
           }
-        }, {
-          key: 'spacingText',
-          value: function spacingText(text) {
-            var callback = arguments.length <= 1 || arguments[1] === undefined ? function () {} : arguments[1];
 
-            try {
-              var newText = this.spacing(text);
+          _createClass(Pangu, [{
+            key: "convertToFullwidth",
+            value: function convertToFullwidth(symbols) {
+              return symbols.replace(/~/g, '～').replace(/!/g, '！').replace(/;/g, '；').replace(/:/g, '：').replace(/,/g, '，').replace(/\./g, '。').replace(/\?/g, '？');
+            }
+          }, {
+            key: "spacing",
+            value: function spacing(text) {
+              if (typeof text !== 'string') {
+                console.warn("spacing(text) only accepts string but got ".concat(_typeof(text)));
+                return text;
+              }
+
+              if (text.length <= 1 || !ANY_CJK.test(text)) {
+                return text;
+              }
+
+              var self = this;
+              var newText = text;
+              newText = newText.replace(CONVERT_TO_FULLWIDTH_CJK_SYMBOLS_CJK, function (match, leftCjk, symbols, rightCjk) {
+                var fullwidthSymbols = self.convertToFullwidth(symbols);
+                return "".concat(leftCjk).concat(fullwidthSymbols).concat(rightCjk);
+              });
+              newText = newText.replace(CONVERT_TO_FULLWIDTH_CJK_SYMBOLS, function (match, cjk, symbols) {
+                var fullwidthSymbols = self.convertToFullwidth(symbols);
+                return "".concat(cjk).concat(fullwidthSymbols);
+              });
+              newText = newText.replace(DOTS_CJK, '$1 $2');
+              newText = newText.replace(FIX_CJK_COLON_ANS, '$1：$2');
+              newText = newText.replace(CJK_QUOTE, '$1 $2');
+              newText = newText.replace(QUOTE_CJK, '$1 $2');
+              newText = newText.replace(FIX_QUOTE_ANY_QUOTE, '$1$2$3');
+              newText = newText.replace(CJK_SINGLE_QUOTE_BUT_POSSESSIVE, '$1 $2');
+              newText = newText.replace(SINGLE_QUOTE_CJK, '$1 $2');
+              newText = newText.replace(FIX_POSSESSIVE_SINGLE_QUOTE, "$1's");
+              newText = newText.replace(HASH_ANS_CJK_HASH, '$1 $2$3$4 $5');
+              newText = newText.replace(CJK_HASH, '$1 $2');
+              newText = newText.replace(HASH_CJK, '$1 $3');
+              newText = newText.replace(CJK_OPERATOR_ANS, '$1 $2 $3');
+              newText = newText.replace(ANS_OPERATOR_CJK, '$1 $2 $3');
+              newText = newText.replace(FIX_SLASH_AS, '$1$2');
+              newText = newText.replace(FIX_SLASH_AS_SLASH, '$1$2$3');
+              newText = newText.replace(CJK_LEFT_BRACKET, '$1 $2');
+              newText = newText.replace(RIGHT_BRACKET_CJK, '$1 $2');
+              newText = newText.replace(FIX_LEFT_BRACKET_ANY_RIGHT_BRACKET, '$1$2$3');
+              newText = newText.replace(ANS_CJK_LEFT_BRACKET_ANY_RIGHT_BRACKET, '$1 $2$3$4');
+              newText = newText.replace(LEFT_BRACKET_ANY_RIGHT_BRACKET_ANS_CJK, '$1$2$3 $4');
+              newText = newText.replace(AN_LEFT_BRACKET, '$1 $2');
+              newText = newText.replace(RIGHT_BRACKET_AN, '$1 $2');
+              newText = newText.replace(CJK_ANS, '$1 $2');
+              newText = newText.replace(ANS_CJK, '$1 $2');
+              newText = newText.replace(S_A, '$1 $2');
+              newText = newText.replace(MIDDLE_DOT, '・');
+              return newText;
+            }
+          }, {
+            key: "spacingText",
+            value: function spacingText(text) {
+              var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+              var newText;
+
+              try {
+                newText = this.spacing(text);
+              } catch (err) {
+                callback(err);
+                return;
+              }
+
               callback(null, newText);
-            } catch (err) {
-              callback(err);
             }
-          }
-        }]);
+          }, {
+            key: "spacingTextSync",
+            value: function spacingTextSync(text) {
+              return this.spacing(text);
+            }
+          }]);
 
-        return Pangu;
-      }();
+          return Pangu;
+        }();
 
-      var pangu = new Pangu();
-      exports = module.exports = pangu;
-      exports.Pangu = Pangu;
+        var pangu = new Pangu();
+        module.exports = pangu;
+        module.exports.default = pangu;
+        module.exports.Pangu = Pangu;
+      });
       /***/
-    }
-    /******/
-    ])
+
+    }])
   );
 });
-
-;
 
 /***/ }),
 /* 7 */
