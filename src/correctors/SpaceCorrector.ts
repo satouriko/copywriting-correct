@@ -1,4 +1,4 @@
-import * as pangu from 'pangu';
+import * as pangu from 'pangu/dist/shared/core';
 
 import { zhSymbols } from '../utils';
 
