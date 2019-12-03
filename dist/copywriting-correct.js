@@ -1,7 +1,7 @@
 /*!
  * copywriting-correct - 中英文文案排版纠正器
  * --------
- * @version 1.0.6
+ * @version 1.0.7
  * @homepage: https://github.com/rikakomoe/copywriting-correct#readme
  * @license MIT
  * @author rikakomoe
